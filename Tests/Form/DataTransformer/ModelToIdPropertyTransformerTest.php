@@ -195,7 +195,7 @@ class ModelToIdPropertyTransformerTest extends \PHPUnit_Framework_TestCase
         $collection[] = $entity2;
         $collection[] = $entity3;
 
-        $this->modelManager->expects($this->exactly(3))
+        $this->modelManager->expects($this->exactly(6))
             ->method('getIdentifierValues')
             ->will($this->returnCallback(function ($value) use ($entity1, $entity2, $entity3) {
                 if ($value == $entity1) {
